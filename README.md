@@ -50,7 +50,7 @@ server.listen(port, function() {
 
 #### authorizeSubscribe ( client, sub, callback )
 
-`aedes` subscribe authorizer handle. Once set, clients can only subscribe to topics that have been added via `addTopic`. Should return `true` or `false` depending on desired auth pattern.
+`aedes` subscribe authorizer handle. Once set, clients can only subscribe to topics that have been added via `addTopic`. 
 
 #### addTopic ( topic, authorizer, [...opts] )
 
@@ -65,7 +65,8 @@ function (client, sub){
 }
 ```
 
-where `sub` has the property `params` which holds the mapped `+` values from subscribed/published topic.
+where `sub` has the property `params` which holds the mapped `+` values from subscribed/published topic.  Should return `true` or `false` depending on desired auth pattern.
+
 
 _`opts`_ takes the object form `{isSubscriptionTopic: true, isPublishTopic: false}`. If no `opts` is given, `authorizer` will be run on both subscriptions and publications. If only `isSubscriptionTopic` or `isPublishTopic` is specified, then the other will not be included in the running of `authorizer` for that topic.
 
