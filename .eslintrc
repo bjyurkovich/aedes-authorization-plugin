@@ -1,0 +1,21 @@
+{
+  "extends": ["standard"],
+  "rules": {
+    "quotes": [2, "double", { "allowTemplateLiterals": true }],
+    "semi": 0,
+    "mocha/no-exclusive-tests": "error",
+    "space-before-function-paren": 0
+  },
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "ecmaFeatures": {
+    "experimentalObjectRestSpread": true
+  },
+  "plugins": ["mocha"]
+}

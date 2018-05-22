@@ -1,0 +1,35 @@
+{
+  "name": "aedes-authorization-plugin",
+  "version": "1.0.0",
+  "description": "Semi-opinionated authorization plugin for aedes MQTT Broker",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjyurkovich/aedes-authorization-plugin.git"
+  },
+  "keywords": [
+    "aedes",
+    "mqtt",
+    "authorization"
+  ],
+  "author": "bjyurkovich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjyurkovich/aedes-authorization-plugin/issues"
+  },
+  "homepage": "https://github.com/bjyurkovich/aedes-authorization-plugin#readme",
+  "devDependencies": {
+    "aedes": "^0.34.0",
+    "aedes-persistence": "^5.1.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "mqtt-pattern": "^1.2.0"
+  }
+}
