@@ -16,7 +16,6 @@ npm i -S aedes-authorization-plugin
 const aedes = require("aedes")({
   persistence: new require("aedes-persistence")()
 });
-const database = new require("../db")();
 const server = require("net").createServer(aedes.handle);
 const port = 1883;
 const {
@@ -33,31 +32,6 @@ addTopic("users/+userId", (client, sub) => {
     return false; // not allowed!
   }
 });
-
-addTopic("users/+userId/events/+eventId", async (client, { params }) => {
-  let id = await database.query(
-    "SELECT event FROM EVENT WHERE id=?",
-    params.eventId
-  );
-
-  if (id) {
-    return true;
-  } else {
-    return false;
-  }
-});
-
-addTopic(
-  "users/+userId/profiles/+profileId",
-  (client, { params }) => {
-    if (params.profileId === "myProfileId") {
-      return true;
-    }
-
-    return false;
-  },
-  { isSubscriptionTopic: true }
-); // only apply to subscription topics
 
 // hook it up
 aedes.authorizeSubscribe = authorizeSubscribe;
