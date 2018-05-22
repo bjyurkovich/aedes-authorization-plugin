@@ -5,21 +5,23 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/test.js --exit",
-    "coveralls":
-      "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bjyurkovich/aedes-authorization-plugin.git"
   },
-  "keywords": ["aedes", "mqtt", "authorization"],
+  "keywords": [
+    "aedes",
+    "mqtt",
+    "authorization"
+  ],
   "author": "bjyurkovich",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bjyurkovich/aedes-authorization-plugin/issues"
   },
-  "homepage":
-    "https://github.com/bjyurkovich/aedes-authorization-plugin#readme",
+  "homepage": "https://github.com/bjyurkovich/aedes-authorization-plugin#readme",
   "devDependencies": {
     "aedes": "^0.34.0",
     "aedes-persistence": "^5.1.1",
