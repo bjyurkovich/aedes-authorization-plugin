@@ -1,6 +1,6 @@
 {
   "name": "aedes-authorization-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Semi-opinionated authorization plugin for aedes MQTT Broker",
   "main": "index.js",
   "scripts": {
